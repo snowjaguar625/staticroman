@@ -80,14 +80,14 @@ export function ScrollControls({
   }, [eps, damping, horizontal, pages])
 
   React.useEffect(() => {
-    el.style.position = 'absolute'
+    el.style.position = 'relative'
     el.style.width = '100%'
     el.style.height = '100%'
     el.style[horizontal ? 'overflowX' : 'overflowY'] = 'auto'
     el.style.top = '0px'
     el.style.left = '0px'
 
-    fixed.style.position = 'sticky'
+    fixed.style.position = 'top'
     fixed.style.top = '0px'
     fixed.style.left = '0px'
     el.appendChild(fixed)
